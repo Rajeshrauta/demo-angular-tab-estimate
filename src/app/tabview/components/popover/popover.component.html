@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="p-2 popover">
+        <table class="table table-responsive-md">
+            <thead>
+                <tr>
+                    <th class="caption-bold-1 sticky-th">1</th>
+                    <th class="caption-bold-1 sticky-th">2</th>
+                    <th class="caption-bold-1 sticky-th">3</th>
+                    <th class="caption-bold-1 sticky-th">4</th>
+                    <th class="caption-bold-1 sticky-th">5</th>
+                    <th class="caption-bold-1 sticky-th">6</th>
+                    <th class="caption-bold-1 sticky-th">7</th>
+                    <th class="caption-bold-1 sticky-th">8</th>
+                    <th class="caption-bold-1 sticky-th">9</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of poperOverData" style="font-size: 14px;">
+                    <td class="align-middle">{{ item.one }}</td>
+                    <td class="align-middle">
+                        {{ item.two }}
+                    </td>
+                    <td class="align-middle">
+                        {{ item.three }}
+                    </td>
+                    <td class="align-middle ">
+                        {{ item.four }}
+                    </td>
+                    <td class="align-middle ">
+                        {{ item.five }}
+                    </td>
+                    <td class="align-middle">
+                        {{ item.six }}
+                    </td>
+                    <td class="align-middle ">
+                        {{ item.seven }}
+                    </td>
+                    <td class="align-middle ">
+                        {{ item.eight }}
+                    </td>
+                    <td class="align-middle">
+                        {{ item.nine }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

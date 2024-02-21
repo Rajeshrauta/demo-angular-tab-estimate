@@ -1,0 +1,27 @@
+::ng-deep .free-items .modal-dialog {
+    width: auto;
+    top: 300px;
+
+    .form-control {
+        box-shadow: none !important;
+    }
+
+    .hand {
+        cursor: pointer;
+    }
+
+    .plus-svg-icon {
+        color: green;
+    }
+
+    .minus-svg-icon {
+        color: red;
+    }
+
+    .disabled {
+        color: rgba(195, 198, 204, 1);
+        pointer-events: none;
+
+    }
+
+}

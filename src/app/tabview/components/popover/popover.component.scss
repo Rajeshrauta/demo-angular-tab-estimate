@@ -1,0 +1,31 @@
+.popover {
+  width: auto !important;
+  min-width: 300px !important;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  /* Ensure popover appears above other content */
+}
+
+th {
+  padding: 1px !important;
+}
+
+td {
+  padding: 1px !important
+}
+
+@media (min-width: 150px) and (max-width: 320px) {
+  .popover {
+    left: 0px;
+    min-width: 100% !important;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 392px) {
+  .popover {
+    min-width: 95% !important;
+
+  }
+}

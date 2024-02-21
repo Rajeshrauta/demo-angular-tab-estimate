@@ -1,0 +1,54 @@
+<div class="container-fluid">
+    <div class="p-2 m-3 d-flex align-items-center">
+        <div> <span class="pe-2">Addtional Discount Price</span> <input type="checkbox" tabindex="-1"
+                class="p-1 checkbox">
+        </div>
+
+        <div class="ms-auto">
+            <app-commom-icons [icon_height]="'22'" [IconType]="'x-mark'" (click)="activeModal.close()" class="hand">
+            </app-commom-icons>
+        </div>
+    </div>
+    <form [formGroup]="freeItemForm">
+        <div class="p-2 m-3 d-flex align-items-center row">
+
+            <div class="p-2 col-lg-4 col-md-4 col-sm-4  col-12">
+                <div class="d-flex align-items-center">
+                    <div class="pe-2 w-100">
+                        <label for="">Quantity</label>
+                        <input type="text" class="form-control" formControlName="qty" (keypress)="numberOnly($event)">
+                    </div>
+                    <div class="mt-4">
+
+                        <app-commom-icons [icon_height]="'18'" [IconType]="'plus-circle'" [fillColor]="'green'"
+                            (click)="onAdd()" class="hand plus-svg-icon"></app-commom-icons>
+                        <br>
+                        <app-commom-icons [icon_height]="'18'" [class.disabled]="freeItemForm?.get('qty')?.value <=0"
+                            [IconType]="'minus-circle'" (click)="onSub()"
+                            class="hand minus-svg-icon"></app-commom-icons>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 col-lg-4 col-md-4 col-sm-4  col-12">
+                <div class="d-flex align-items-center">
+                    <div class="pe-2 w-100">
+                        <label for="">Free</label>
+                        <input type="text" class="form-control" formControlName="free" (keypress)="numberOnly($event)">
+                    </div>
+                    <div class="mt-4">
+                        <app-commom-icons [icon_height]="'18'" [IconType]="'plus-circle'" (click)="onAddFree()"
+                            class="hand plus-svg-icon"></app-commom-icons>
+                        <br>
+                        <app-commom-icons [icon_height]="'18'" [class.disabled]="freeItemForm?.get('free')?.value <=0"
+                            [IconType]="'minus-circle'" (click)="onSubFree()"
+                            class="hand minus-svg-icon"></app-commom-icons>
+                    </div>
+                </div>
+            </div>
+            <div class="p-2 col-lg-4 col-md-4 col-sm-4  col-12">
+                <button type="button" class="btn btn-primary mt-4 w-100" (click)="closeModal()">Save</button>
+            </div>
+        </div>
+    </form>
+</div>

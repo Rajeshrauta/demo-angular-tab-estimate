@@ -1,0 +1,33 @@
+<nav class="sidebar d-none d-sm-block" [class.sidebar-wd]="!navbarExpanded">
+    <div class="sidebar-sticky custom-scroll">
+        <a class="nav-brand over-flow logo my-3" (click)="defaultRoute()">
+            <img *ngIf="navbarExpanded" src="assets/img/JMDLogo.png" class="JMDLogo-img" alt="logo" />
+            <img *ngIf="!navbarExpanded" src="assets/img/JMDLogo-Small.png" class="JMDLogo-Small" alt="logo" />
+        </a>
+        <ul class="bar" [class.on-bar-click]="navbarExpanded">
+            <div class="bar-bg text-center p-1 rounded">
+                <svg (click)="navbarExpanded = !navbarExpanded" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 menu-svg1">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </div>
+        </ul>
+        <ul class="nav flex-column mt-2 over-flow" style="height: calc(100vh - 150px);">
+
+            <div class="mange-sd-scroll">
+                <li class="nav-item">
+                    <a title="Tab-View" [routerLink]="['/tabView']" class="nav-link" routerLinkActive="active-link"
+                        #rlaDoc="routerLinkActive">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6  menu-svg" [class.menu-svg-active]="rlaDoc.isActive">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M10.5 19.5h3m-6.75 2.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-15a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 4.5v15a2.25 2.25 0 0 0 2.25 2.25Z" />
+                        </svg>
+                        <span class="show" [class.hide]="!navbarExpanded">Tab View</span>
+                    </a>
+                </li>
+            </div>
+        </ul>
+    </div>
+</nav>

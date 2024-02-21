@@ -1,0 +1,149 @@
+.sidebar {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    transition: 0s;
+    background: #2f4050;
+    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #2f4050;
+    font-size: 13px;
+    color: #676a6c;
+
+    .nav-brand {
+        font-size: 26px;
+        color: #0b64e1;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.21);
+        width: 100%;
+        display: block;
+    }
+
+    .nav-item {
+        .nav-link {
+            position: relative;
+            padding: 18px 0 18px 30px;
+        }
+
+        a {
+            color: #0b64e1;
+            background-color: #0000;
+        }
+    }
+}
+
+.nav-item .nav-link:hover,
+.nav-item .active-link {
+    background-color: #000000;
+
+    i,
+    span {
+        color: #0b64e1;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background-color: #0b64e1;
+    }
+}
+
+.bar {
+    position: relative;
+    top: -83px;
+    left: 90px;
+    cursor: pointer;
+}
+
+.sidebar-wd {
+    width: 100px;
+    transition: all 0s ease-in-out !important;
+
+    .nav-link {
+        padding: 18px 0 18px 10px !important;
+    }
+
+
+    .nav-item {
+        text-align: center;
+    }
+
+    .menu-svg {
+        width: 22px;
+        color: #a7b1c2 !important;
+    }
+}
+
+.on-bar-click {
+    left: 180px;
+}
+
+.menu-svg1 {
+    width: 30px;
+    color: #ffff !important;
+}
+
+.bar-bg {
+    width: 50px;
+    background-color: #1ab394;
+}
+
+.menu-svg {
+    width: 22px;
+    color: #5f616c;
+}
+
+.menu-svg-active {
+    width: 22px;
+    color: #0b64e1 !important;
+}
+
+.hide {
+    opacity: 0 !important;
+    visibility: hidden;
+}
+
+.show {
+    position: absolute;
+    transition: visibility 0s, opacity 1s linear;
+    opacity: 1;
+    display: inline;
+    margin-top: 2px;
+    margin-left: 15px;
+    font-family: Open Sans !important;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: -0.4px;
+    color: #110a36;
+}
+
+.over-flow {
+    overflow: hidden;
+}
+
+.JMDLogo-img {
+    height: 60px;
+}
+
+.JMDLogo-Small {
+    height: 60px;
+    width: 60px;
+}
+
+.logo {
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.mange-sd-scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100vh - 250px);
+}
